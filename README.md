@@ -176,19 +176,19 @@
 
 ### Assignment (নির্ধারণ অপারেটর)
 
-- =, +=, -=, *=, /=
+> =, +=, -=, *=, /=
 
 ### Comparison (তুলনা)
 
-- ==, !=, ===, !==, < (less), > (greater), <=, >=
+> ==, !=, ===, !==, < (less), > (greater), <=, >=
 
 ### Increment / decrement
 
-- ++a, a++, --a, a-- 
+> ++a, a++, --a, a-- 
 
 ### Logical and others
 
-- !, &&, || 
+> !, &&, || 
 
 ### Statements
 
