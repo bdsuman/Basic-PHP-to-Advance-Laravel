@@ -163,7 +163,7 @@
 ### Arithmetic (গাণিতিক অপারেটর) 
 >Arithmetic operators are used to perform arithmetic on numbers:
 
-| Operator | Description                  |
+    | Operator | Description                  |
     | -------- | ---------------------------- |
     | +        | Addition                     |
     | -        | Subtraction                  |
