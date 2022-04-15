@@ -273,6 +273,81 @@
 <details>
 <summary>Click Here For Details</summary>
 
+## Different types of Array
+
+- Keyword: break, continue
+
+- Indexed array
+
+- Associative array
+
+- Multidimensional array
+
+### Resource 
+
+1. Break, continue keyword
+
+- https://www.javatpoint.com/php-break
+
+- https://www.javatpoint.com/php-continue 
+
+2. Indexed array
+
+- https://www.javatpoint.com/php-indexed-array 
+
+3. Associative array
+
+- https://www.javatpoint.com/php-associative-array 
+
+4. Multidimensional array
+
+- https://www.javatpoint.com/php-multidimensional-array 
+
+</details>
+
+## Class 06
+
+<details>
+<summary>Click Here For Details</summary>
+
+## Array Function
+- count(which_array), sizeof(which_array)
+
+- max(which_array), min(which_array)
+
+- in_array(which_you_want_search, from_which_array, strict_mode)
+
+- array_search(which_you_want_search, from_which_array)
+
+- array_pop(from_which_array) - for delete last element
+
+- array_push(which_array, new_value) - add element on last
+
+- array_merge(all_arrays) - make a new array by merging multiple array
+
+- array_slice(from_which_array, from_index, total_element) - make a new array by taking some element from an array.
+
+- array_splice(from_which_array, from_index, total_element) - remove array element from an this array
+
+- array_diff(first_array, second_array)
+
+- array_unique(which_array)
+
+- array_sum(which_array)
+
+### Resource
+
+- https://www.php.net/manual/en/ref.array.php
+- https://www.w3schools.com/php/php_ref_array.asp
+
+
+</details>
+
+## Class 07
+
+<details>
+<summary>Click Here For Details</summary>
+
 ## Title
 ### Sub Title
 
