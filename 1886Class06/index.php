@@ -49,11 +49,11 @@ $second_email_array = ["efg@gmail.com", "xyz@gmail.com", "dummy@gmail.com"];
 
 //Array Merge funtion Make two or more array in a single array 
 $mergeArray = array_merge($first_email_array, $second_email_array);
-echo "Make a Single Array from Given Two Arrays Below Output";
+/*echo "Make a Single Array from Given Two Arrays Below Output";
 echo '<pre>';
 print_r($mergeArray);
 echo '</pre>';
-
+*/
 //Array Unique funtion Make array all data unique value
 $uniqueArray = array_unique($mergeArray);
 echo "Merging Array are Transform Unique Array Below Output";
@@ -77,21 +77,10 @@ $citylist = array(
                     "Sun City", "Surprise", "Tempe", "Tucson", "Wickenburg" 
                 );
 
-/*Array Chunk funtion Make array into chunks 4 but extra 1 data modulas 
-so define custom method using array slice function for equal 4 chunks */
-
-$chunsArray=$citylist;
+/*Array Chunk funtion Make array into chunks 4 */
 $part=4;
-$listlen = count($chunsArray);
-$partlen = floor( $listlen / $part );
-$partrem = $listlen % $part;
-$partition = array();
-$mark = 0;
-for ($px = 0; $px < $part; $px++) {
-    $incr = ($px < $partrem) ? $partlen + 1 : $partlen;
-    $partition[$px] = array_slice( $chunsArray , $mark, $incr );
-    $mark += $incr;
-}
+$partition = array_chunk($citylist,$part);
+
 
 echo '<pre>';
 print_r($partition);
