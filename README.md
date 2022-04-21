@@ -348,6 +348,46 @@
 <details>
 <summary>Click Here For Details</summary>
 
+## More Array functions
+
+- array_rand(from_which_array, how_many_element) - pick random keys
+- 
+- shuffle(which_array) - randomize order of array elements
+- 
+- array_chunk(which_array, how_many_element, keys_sequence) - Split an array into chunks
+- 
+- asort(which_array, sort_rule) - sort ascending order, arsort(which_array, sort_rule) - sort descending order,
+- 
+- ksort(which_array, sort_rule) - sort keys by ascending order, krsort() - sort keys by descending order
+- 
+- implode(separator_symble, which_array) - Join array elements with a string (array to string)
+- 
+- explode(separator_symble, which_string, element_limit) - String to array
+
+### Write php code on html
+
+### Project based on array
+
+### Mini Project - Product List (table/E-commerce)
+
+## Resource
+- More array Functions
+
+- https://www.php.net/manual/en/ref.array.php 
+
+- Writing php code in html
+- 
+- https://www.php.net/manual/en/control-structures.alternative-syntax.php 
+- 
+- https://stackoverflow.com/questions/10258345/php-simple-foreach-loop-with-html 
+
+</details>
+
+## Class 08
+
+<details>
+<summary>Click Here For Details</summary>
+
 ## Title
 ### Sub Title
 
