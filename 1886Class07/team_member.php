@@ -133,7 +133,7 @@ $team_members=[
    
     ['name'=>'Zinia Rahman','image'=>'https://i.imgur.com/HjKTNkG.jpg','title'=>'CEO','facebook'=>'#','twitter'=>'#','instagram'=>'#'],
     ['name'=>'Muklesur Rahman Mamun','image'=>'https://i.imgur.com/HjKTNkG.jpg','title'=>'Director','facebook'=>'#','twitter'=>'#','instagram'=>'#'],
-    ['name'=>'Suman Sen','image'=>'img/suman_sen.jpg','title'=>'Software Developer','facebook'=>'https://www.facebook.com/sumanglobal','twitter'=>'htps://twitter.com/sumanglobal','instagram'=>'https://instagram.com/sumanglobal']
+    ['name'=>'Suman Sen','image'=>'https://github.com/bdsuman/Basic-PHP-to-Advance-Laravel/blob/main/1886Class07/img/suman_sen.jpg','title'=>'Software Developer','facebook'=>'https://www.facebook.com/sumanglobal','twitter'=>'htps://twitter.com/sumanglobal','instagram'=>'https://instagram.com/sumanglobal']
 ]
 
 ?>
