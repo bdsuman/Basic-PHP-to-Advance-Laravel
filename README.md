@@ -388,6 +388,70 @@
 <details>
 <summary>Click Here For Details</summary>
 
+## Class 8 Overview
+1. User defined Functions 
+
+- What is function & Why we use it.
+
+- Way to create user defined functions.
+
+- Parameter, Argument, Return
+
+- Mini Project - Execute a common work using function
+
+2. Built in String functions
+
+- Strlen()
+
+- Str_word_count()
+
+- Strpos()
+
+- Substr()
+
+- str_split()
+
+- Str_replace()
+
+- Strtoupper()
+
+- Strtolower()
+
+- Str_shuffle()
+
+- md5()
+
+- money_format()
+
+- number_format()
+
+- htmlspecialchars()
+
+- strip_tags()
+
+- trim()
+
+### Class Resource 
+
+1. User Defined Function
+
+- https://www.php.net/manual/en/functions.user-defined.php 
+
+- https://www.w3schools.com/php/php_functions.asp 
+
+2. Built in String functions
+
+- https://www.php.net/manual/en/ref.strings.php 
+
+- https://www.w3schools.com/php/php_ref_string.asp 
+
+</details>
+
+## Class 09
+
+<details>
+<summary>Click Here For Details</summary>
+
 ## Title
 ### Sub Title
 
