@@ -193,7 +193,7 @@ function bmi($height,$weight){
 $height = 1.70688;
 $weight = 85;
 
-echo 'Your BMI Value is : '.bmi($height,$weight);
+echo 'Your are : '.bmi($height,$weight);
 
 echo'<br><hr>Question 06:<br><br>';
 /* 
