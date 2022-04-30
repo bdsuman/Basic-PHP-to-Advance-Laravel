@@ -78,7 +78,7 @@ Case Study:
                 ?>
                     <h5 class="card-title"><span style="color:red"> * </span> Mark Field Are Required</h5>
                         <hr><br>
-                        <form action="action.php" method="POST">
+                        <form action="" method="POST">
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="fname">First Name <span style="color:red"> * </span></label>
