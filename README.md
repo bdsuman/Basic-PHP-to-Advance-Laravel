@@ -452,6 +452,51 @@
 <details>
 <summary>Click Here For Details</summary>
 
+## Class 9 Overview
+1. Some essentials things
+
+- isset, empty, die
+
+- Undefined, empty / flag, null, array variable
+
+2. Form Handling
+
+- Set Method - for getting form data
+
+- Set Action - for sending data 
+
+- Set Field Name - for getting form data by field name
+
+- Receive Form Value by supper global variable - $_GET, $_POST, $_REQUEST
+
+- Get Method vs Post Method
+
+- Form isset
+
+- Primary Validation message.
+### Class Resource
+
+1. Some essentials things
+
+- https://www.php.net/manual/en/function.empty.php 
+
+- https://www.php.net/manual/en/function.isset 
+
+- https://www.php.net/manual/en/function.die 
+
+2. Form Handling
+
+- https://www.w3schools.com/php/php_forms.asp 
+2. Github Link 
+- https://github.com/rafiswe/PHP-Form-Handling 
+
+</details>
+
+## Class 10
+
+<details>
+<summary>Click Here For Details</summary>
+
 ## Title
 ### Sub Title
 
