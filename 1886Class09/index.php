@@ -21,66 +21,111 @@ Case Study:
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     
 </head>
-<body>
-
-<?php
-
-
-?>    
+<body>    
 <div class="container">
         <div class="card ">
                 <div class="card-header text-center font-weight-bold">
-                       <h2>Registration Form</h2> 
-                       
+                       <h2>Registration Form</h2>      
                 </div>
                 <div class="card-body">
+                <?php
+                    function required($field,$data,$check){
+                        if($check==1){
+                            if($data==''){
+                                echo '<script> alert( "Warning!! '.$field.' field are Required.");</script>';
+                                return $check=0;    
+                            }else{
+                                return $check=1;
+                            }
+                        }
+                    }
+
+
+                    if(isset($_POST['submit']) || isset($_GET['submit'])){
+                    
+                        if(isset($_POST['submit'])){
+                            $method=$_POST;
+                        }else{
+                            $method=$_GET;
+                        }
+                    /* echo '<pre>';
+                            print_r($method);
+                        echo '</pre>';*/
+
+                        $fname = $method['fname'];
+                        $lname = $method['lname'];
+                        $mobile = $method['mobile'];
+                        $email = $method['email'];
+                        $address = $method['address'];
+                        $city = $method['city'];
+                        $upozilla = $method['upozilla'];
+                        $postCode = $method['postCode'];
+
+                        //Required Field 
+                        $check=1; // 0 = empty data 1 have data
+
+                        $check = required('First Name',$fname,$check);
+                        $check = required('Last Name',$lname,$check);
+                        $check = required('Mobile No ',$mobile,$check);
+                        $check = required('Address',$address,$check);
+                        $check = required('Post Code',$postCode,$check);
+
+                        if($check===1){
+                            echo "<h3><b>Congratulations {$fname} {$lname} !!! Successfully Saved Data.</b></h3>";
+                        }
+
+                    }
+                ?>
                     <h5 class="card-title"><span style="color:red"> * </span> Mark Field Are Required</h5>
                         <hr><br>
-                        <form>
+                        <form action="action.php" method="POST">
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="inputEmail4">First Name <span style="color:red"> * </span></label>
-                                        <input type="email" class="form-control" id="inputEmail4" placeholder="First Name">
+                                        <label for="fname">First Name <span style="color:red"> * </span></label>
+                                        <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="inputPassword4">Last Name <span style="color:red"> * </span></label>
-                                        <input type="password" class="form-control" id="inputPassword4" placeholder="Last Name">
+                                        <label for="lname">Last Name <span style="color:red"> * </span></label>
+                                        <input type="text" class="form-control" name="lname" id="lname" placeholder="Last Name">
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="inputPassword4">Mobile <span style="color:red"> * </span></label>
-                                        <input type="tel" class="form-control" id="inputPassword4" placeholder="Mobile">
+                                        <label for="mobile">Mobile <span style="color:red"> * </span></label>
+                                        <input type="tel" class="form-control" id="mobile" name="mobile" placeholder="Mobile">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="inputEmail4">Email</label>
-                                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
                                     </div>
                                     
                                 </div>
                                  <div class="form-group">
-                                    <label for="inputAddress2">Address <span style="color:red"> * </span></label>
-                                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, Road, or floor">
+                                    <label for="address">Address <span style="color:red"> * </span></label>
+                                    <input type="text" class="form-control" id="address" name="address" placeholder="Apartment, Road, or floor">
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
-                                        <label for="inputCity">City</label>
-                                        <input type="text" class="form-control" id="inputCity" placeholder="City">
+                                        <label for="city">City</label>
+                                        <input type="text" class="form-control" id="city" name="city" placeholder="City">
                                     </div>
                                     <div class="form-group col-md-4">
-                                        <label for="inputState">Upozilla</label>
-                                        <select id="inputState" class="form-control">
-                                        <option selected>Choose...</option>
-                                        <option>...</option>
+                                        <label for="upozilla">Upozilla</label>
+                                        <select id="upozilla" name="upozilla" class="form-control">
+                                            <option  >Choose...</option>
+                                            <option value="Sadar" selected >Sadar</option>
+                                            <option value="Gouripur" >Gouripur</option>
+                                            <option value="Haluaghat" >Haluaghat</option>
+                                            <option value="Tarakanda" >Tarakanda</option>
                                         </select>
                                     </div>
                                     <div class="form-group col-md-4">
-                                        <label for="inputZip">Zip <span style="color:red"> * </span></label>
-                                        <input type="text" class="form-control" id="inputZip">
+                                        <label for="postCode">Post Code<span style="color:red"> * </span></label>
+                                        <input type="text" class="form-control" id="postCode" name="postCode" placeholder="Post Code">
                                     </div>
                                 </div>
                                 <div align="center">
-                                    <button type="submit" class="btn btn-primary">SAVE</button>
+                                    <button type="submit" name="submit" class="btn btn-primary">SAVE</button>
                                 </div>
                                 
                         </form>
