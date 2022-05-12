@@ -497,6 +497,29 @@
 <details>
 <summary>Click Here For Details</summary>
 
+## Project
+### Form Handling
+
+- Validate - Set Dismissable alert message
+
+- Validate - filter email or not 
+
+- Validate - valid email check function
+
+- Validate - edu email check function
+
+#### Resource
+1. Form Handling
+- https://www.w3schools.com/php/php_forms.asp 
+
+2. Github Link
+- https://github.com/rafiswe/PHP-Form-Handling
+</details>
+## Class 11
+
+<details>
+<summary>Click Here For Details</summary>
+
 ## Title
 ### Sub Title
 

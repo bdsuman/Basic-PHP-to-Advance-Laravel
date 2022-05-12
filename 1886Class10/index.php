@@ -1,11 +1,11 @@
 <!-- 
-Class 9 Assingment: Suman Chandra Sen, Id:1886 
+Class 10 Assingment: Suman Chandra Sen, Id:1886 
 
 Case Study:
     Question 01:
-        Practice class 9
+        Practice class 10
         Create a own design registration form
-        Practice all things which already done in class 9
+        Practice all things which already done in class 10
 		
  -->
 <!DOCTYPE html>
@@ -16,9 +16,6 @@ Case Study:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     
 </head>
 <body>    
@@ -28,23 +25,48 @@ Case Study:
                        <h2>Registration Form</h2>      
                 </div>
                 <div class="card-body">
-                <?php
-                     /**
-                 * Required Form Field & show Message
-                 * @param string $field name with Message
-                 * @param string $data field name
-                 * @param int $check
-                 */
-                function required($field,$data,$check){
-                    if($check==1){
-                        if($data==''){
-                            echo '<script> alert( "Warning!! '.$field.' field are Required.");</script>';
-                            return $check=0;    
-                        }else{
-                            return $check=1;
-                        }
-                    }
-                }
+    <?php
+              
+        /**
+         * For Show validation message
+         *
+         * @param string $message
+         * @param string $alertType
+         */
+        function validate($message, $alertType="danger") {
+            return "<div class=\"alert alert-{$alertType} alert-dismissible fade show\" role=\"alert\">
+                        <strong>{$message}!</strong>
+                        <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+                        <span aria-hidden=\"true\">&times;</span>
+                        </button>
+                    </div>";
+        }
+        
+        /**
+         * validateEmail For check valid email or not.
+         * @param string $email
+         */
+        function validateEmail($email) {
+            if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        /**
+         * filterEduMail for filtering institution email addresses
+         * @param string $email
+         */
+        function filterEduMail($email) {
+            $validEmails = array('diu.edu.bd', 'brac.edu.bd', 'nsu.edu.bd','du.edu.bd','sust.edu.bd');
+            $email_arr = explode('@', $email, 2);
+            if (in_array(end($email_arr), $validEmails)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
 
 
                     if(isset($_POST['submit']) || isset($_GET['submit'])){
@@ -67,23 +89,34 @@ Case Study:
                         $upozilla = $method['upozilla'];
                         $postCode = $method['postCode'];
 
-                        //Required Field 
-                        $check=1; // 0 = empty data 1 have data
+                        if (empty($fname) || empty($lname) || empty($email) || empty($mobile) || empty($address) || empty($postCode)) {
 
-                        $check = required('First Name',$fname,$check);
-                        $check = required('Last Name',$lname,$check);
-                        $check = required('Mobile No ',$mobile,$check);
-                        $check = required('Address',$address,$check);
-                        $check = required('Post Code',$postCode,$check);
-
-                        if($check===1){
-                            echo "<h3><b>Congratulations {$fname} {$lname} !!! Successfully Saved Data.</b></h3>";
+                            $validationMsg = validate('* Mark fields are required');
+            
+                        } else if (validateEmail($email) == false) {
+            
+                            $validationMsg = validate('Email is not valid', 'warning');
+            
+                        } else if (filterEduMail($email) == false) {
+            
+                            $validationMsg = validate('Email is not a edu mail', 'warning');
+            
+                        } else {
+            
+                            $validationMsg = validate("Congratulations {$fname} {$lname} !!! Successfully Saved Data.", 'success');
+            
                         }
 
                     }
                 ?>
                     <h5 class="card-title"><span style="color:red"> * </span> Mark Field Are Required</h5>
                         <hr><br>
+                        <?php 
+                            if (isset($validationMsg)) {
+                                    echo $validationMsg;
+                                }
+                        ?>
+                        
                         <form action="" method="POST">
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
@@ -101,7 +134,7 @@ Case Study:
                                         <input type="tel" class="form-control" id="mobile" name="mobile" placeholder="Mobile">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="email">Email</label>
+                                        <label for="email">Email <span style="color:red"> * </span></label>
                                         <input type="email" class="form-control" id="email" name="email" placeholder="Email">
                                     </div>
                                     
@@ -141,7 +174,10 @@ Case Study:
                 </div>
         </div>
 </div>
-
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    
 </body>
 </html>
 
