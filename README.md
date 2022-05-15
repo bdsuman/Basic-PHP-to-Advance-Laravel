@@ -520,6 +520,37 @@
 <details>
 <summary>Click Here For Details</summary>
 
+## Form Handling
+### Topic
+1. Form Handling
+
+- Validate - age validate function
+
+- Validate - username validate function
+
+- Validate - keep old data in fields.
+
+- Validate - clear field data after success
+
+- Validate - auto suggestion off
+
+- Field - radio button
+
+- Field - Checkbox field
+
+- Field - select option field
+#### Resource
+1. Form Handling
+- https://www.w3schools.com/php/php_forms.asp 
+
+2. Github Link
+- https://github.com/rafiswe/PHP-Form-Handling
+</details>
+
+## Class 12
+<details>
+<summary>Click Here For Details</summary>
+
 ## Title
 ### Sub Title
 
