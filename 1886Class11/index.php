@@ -124,6 +124,7 @@ Case Study:
                         $upozilla = $method['upozilla'];
                         $postCode = $method['postCode'];
                         $age = $method['age'];
+                        $username = $method['username'];
 
                         $gender       = '';
                         if (isset($_POST['gender'])) {
@@ -210,15 +211,15 @@ Case Study:
             
                         } 
                         // for user name
-                       /* if(empty($userName)){
-                            $validationMsgUserName = validate('Username is required');
+                        if(empty($username)){
+                            $validationMsgUsername = validate('Username is required');
                             $error++;
                         }else if (validateUsername($username) == false) {
             
-                            $validationMsgUserName = validate('Username not valid', 'warning');
+                            $validationMsgUsername = validate('Username not Valid. ', 'warning');
                             $error++;
             
-                        } */
+                        }
                         
                         if ($agree_status != 'yes') {
                             $validationMsgAgree = validate('Please agree terms and conditions', 'warning');
@@ -263,6 +264,15 @@ Case Study:
                                         ?>
                                     </div>
                                 </div>
+                            <div class="form-group">
+                                    <label for="username">User Name <span style="color:red"> * </span></label>
+                                        <input type="text" class="form-control" name="username" id="username" value="<?php oldValue('username');?>" placeholder="UserName(Hints: Min: 5, Max: 20, Pattern: a-zA-Z0-9_ allowed)">
+                                        <?php 
+                                            if (isset($validationMsgUsername)) {
+                                                    echo $validationMsgUsername;
+                                                }
+                                        ?>
+                            </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="fieldFive" class="form-label">Gender <span style="color:red"> * </span></label><br>
