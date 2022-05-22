@@ -552,6 +552,18 @@
 <details>
 <summary>Click Here For Details</summary>
 
+## Practice class 12
+   
+###  Create a own design of company website
+
+### Template it 
+
+</details>
+
+## Class 13
+<details>
+<summary>Click Here For Details</summary>
+
 ## Title
 ### Sub Title
 
