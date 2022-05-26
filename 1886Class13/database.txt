@@ -1,0 +1,129 @@
+-- Suman Chandra Sen ID: 1886
+--
+-- Create Database: `user_information`
+--
+CREATE DATABASE `user_information`; 
+-- --------------------------------------------------------
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `username` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `age` int(11) NOT NULL,
+  `phone` varchar(11) NOT NULL,
+  `address` text NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Single Insert data for table `user`
+--
+
+INSERT INTO `user` (`username`, `age`, `phone`, `address`, `created_at`, `updated_at`) VALUES
+('suman', 29, '01921440084', 'sadar, Mymensingh', current_timestamp(), 'null');
+--
+-- Multiple Insert data for table `user`
+--
+
+INSERT INTO `user` (`username`, `age`, `phone`, `address`, `created_at`, `updated_at`) VALUES
+('suman', 29, '01921440084', 'sadar, Mymensingh', current_timestamp(), 'null'),
+('suman', 29, '01921440084', 'sadar, Mymensingh', current_timestamp(), 'null'),
+('suman', 29, '01921440084', 'sadar, Mymensingh', current_timestamp(), 'null'),
+('suman', 29, '01921440084', 'sadar, Mymensingh', current_timestamp(), 'null'),
+('suman', 29, '01921440084', 'sadar, Mymensingh', current_timestamp(), 'null');
+
+--
+-- Update query for table `user`
+--
+
+UPDATE `user` SET `age` = '30' WHERE `user`.`id` = 1;
+
+--
+-- Delete query for table `user`
+--
+
+delete from `user` WHERE `user`.`id` = 1;
+
+
+-- ------------------------------------------------------------------------------------
+--
+-- Table structure for table `comments`
+--
+
+CREATE TABLE `comments` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `post_id` bigint(20) UNSIGNED NOT NULL,
+  `comment` varchar(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp(),
+  `deleted_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Multiple insert data for table `comments`
+--
+
+INSERT INTO `comments` (`id`, `post_id`, `comment`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(9, 2, 'good', current_timestamp(), NULL, NULL),
+(10, 3, 'better', current_timestamp(), NULL, NULL);
+
+
+--
+-- Update query for table `comments`
+--
+
+UPDATE `comments` SET `comment` = 'We love Bangladesh' WHERE `comments`.`id` = 1;
+
+--
+-- Soft Delete query for table `comments` ( Recover Possible)
+--
+UPDATE `comments` SET `deleted_at` = current_timestamp() WHERE `comments`.`id` = 1;
+
+--
+-- Hard Delete query for table `posts` ( Recover Not Possible)
+--
+delete from `comments` WHERE `comments`.`id` = 1;
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `posts`
+--
+
+CREATE TABLE `posts` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `post_title` varchar(255) NOT NULL,
+  `post_details` text NOT NULL,
+  `post_file` varchar(50) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp(),
+  `deleted_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Multiple Insert data for table `posts`
+--
+
+INSERT INTO `posts` (`id`, `post_title`, `post_details`, `post_file`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(2, 'Bangladesh reports 28 new COVID cases, no deaths', 'Bangladesh has registered 28 cases of COVID-19 in a day, taking the overall tally of infections to 1,953,356.', 'covid.docs', current_timestamp(), NULL, NULL),
+(3, 'Bangladesh reports 28 new COVID cases, no deaths', 'Bangladesh has registered 28 cases of COVID-19 in a day, taking the overall tally of infections to 1,953,356.', 'covid.docs', current_timestamp(), NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Update query for table `posts`
+--
+
+UPDATE `posts` SET `post_title` = 'We love Bangladesh' WHERE `posts`.`id` = 1;
+
+--
+-- Soft Delete query for table `posts` ( Recover Possible)
+--
+UPDATE `posts` SET `deleted_at` = current_timestamp() WHERE `posts`.`id` = 1;
+
+--
+-- Hard Delete query for table `posts` ( Recover Not Possible)
+--
+delete from `posts` WHERE `posts`.`id` = 1;
