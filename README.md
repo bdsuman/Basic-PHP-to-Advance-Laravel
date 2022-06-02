@@ -564,6 +564,72 @@
 <details>
 <summary>Click Here For Details</summary>
 
+## Assignment
+### Practice class 13
+
+- Create a Database name  user_information.
+
+- In Users table 7 column:  id  , username , age , phone, address, created_at, updated_at
+
+- In Products table 7 column: id, post_title , post_details, post_file, created_at, updated_at, deleted_at
+
+- In comments table 3 column:  id, post_id, comment, created_at, updated_at, deleted_at
+
+
+- make a single & multiple insert query for every table.
+
+- Make a update query and also make a delete query for every table
+
+
+
+- Now create a text file and write all sql query there and submit github repo link
+
+#### Resource
+##### Data Types in sql
+
+- https://www.tutorialspoint.com/mysql/mysql-data-types.htm 
+
+##### Data CRUD into a table
+
+- https://www.w3schools.com/sql/sql_insert.asp 
+
+- https://www.w3schools.com/sql/sql_update.asp 
+
+- https://www.w3schools.com/sql/sql_delete.asp 
+
+- https://www.w3schools.com/sql/sql_select.asp 
+</details>
+
+## Class 14
+<details>
+<summary>Click Here For Details</summary>
+
+## Title
+### Create a Database name  user_information.
+- In Users table 5 column:  id  , username , age , phone, address, salary , country  ,created_at, updated_at
+
+- Find users who live in same country 
+
+- Show data  by high to low salary 
+
+- Show data who get the highest salary
+
+- Show data who get the lowest 
+
+- Show how many table you have 
+
+- Show me how many users get a salary range of ( 5000 -15000).
+
+### Resource
+
+- https://www.w3schools.com/mysql/mysql_select.asp
+
+</details>
+
+## Class 15
+<details>
+<summary>Click Here For Details</summary>
+
 ## Title
 ### Sub Title
 
