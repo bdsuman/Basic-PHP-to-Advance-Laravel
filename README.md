@@ -630,6 +630,34 @@
 <details>
 <summary>Click Here For Details</summary>
 
+## Table Joining
+### MySql Join Table
+- Left join
+
+- Right join
+
+- Inner join
+
+- Relation
+
+- Group By
+
+- Having
+</details>
+
+## Class 16
+<details>
+<summary>Click Here For Details</summary>
+
+## Portfolio Website
+### Given Website Find Draw Database Design 
+
+</details>
+
+## Class 17
+<details>
+<summary>Click Here For Details</summary>
+
 ## Title
 ### Sub Title
 

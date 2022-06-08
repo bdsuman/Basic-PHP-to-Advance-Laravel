@@ -1,0 +1,72 @@
+-- Suman Chandra Sen ID: 1886 and Class: 16 Assignment 
+--
+-- Create Database: `user_information`
+--
+	
+	CREATE DATABASE `user_information`; 
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `age` int(11) NOT NULL,
+  `phone` varchar(11) NOT NULL,
+  `address` text NOT NULL,
+  `salary` double NOT NULL,
+  `country` varchar(100) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `age`, `phone`, `address`, `salary`, `country`, `created_at`, `updated_at`) VALUES
+(1, 'suman', 29, '01921440084', 'Sadar, Mymensingh', 15000, 'Bangladesh', '2022-06-02 11:03:38', NULL),
+(2, 'sumansen', 29, '01738232629', 'Sadar, Mymensingh', 10000, 'Bangladesh', '2022-06-02 11:07:00', NULL),
+(3, 'sensuman', 29, '012899388', 'Sadar, Mymensingh', 5000, 'India', '2022-06-02 11:07:00', NULL),
+(4, 'sujan', 29, '3453535', 'Sadar, Mymensingh', 7000, 'Pakistan', '2022-06-02 11:07:00', NULL),
+(5, 'sutopa', 29, '45645646', 'Sadar, Mymensingh', 12000, 'India', '2022-06-02 11:07:00', NULL),
+(6, 'rima', 29, '75674557', 'Sadar, Mymensingh', 90000, 'Bangladesh', '2022-06-02 11:07:00', NULL),
+(7, 'jakir', 29, '9878778979', 'Sadar, Mymensingh', 13000, 'Bangladesh', '2022-06-02 11:07:00', NULL);
+
+--
+-- Table structure for table `users_details`
+--
+
+CREATE TABLE `users_details` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `users_id` int(11) NOT NULL COMMENT 'id_from_users',
+  `details` text NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_on` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+--
+-- Dumping data for table `users_details`
+--
+
+INSERT INTO `users_details` (`id`, `users_id`, `details`, `created_at`, `updated_on`) VALUES
+(1, 1, 'Job: Software Developer,Passion: Programming,Language: PHP', '2022-06-08 15:00:48', NULL),
+(2, 4, 'Job: Micro Credit, Passion: Motor Cycle', '2022-06-08 15:03:56', NULL),
+(3, 5, 'Job: Teacher, Passion: Reading', '2022-06-08 15:03:56', NULL),
+(4, 6, 'Job: Govt., Passion: Reading', '2022-06-08 15:05:10', NULL),
+(5, 7, 'Job: Teacher, Passion: Traveling', '2022-06-08 15:05:10', NULL);
+
+
+Inner Join 
+-------------
+SELECT users.username,users.phone,users.address,users_details.details from users inner join users_details on users.id=users_details.users_id;
+
+Left Join
+------------
+SELECT users.username,users.phone,users.address,users_details.details from users left join users_details on users.id=users_details.users_id;
+
+Right Join
+-----------
+SELECT users.username,users.phone,users.address,users_details.details from users right join users_details on users.id=users_details.users_id;
