@@ -12,4 +12,12 @@
 	<link href="assets/css/minified/components.min.css" rel="stylesheet" type="text/css">
 	<link href="assets/css/minified/colors.min.css" rel="stylesheet" type="text/css">
 	<!-- /global stylesheets -->
+    <style>
+        .panel-flat>.panel-heading {
+            border-bottom: 1px solid #dddddd;
+        }
+        .add-new {
+            color: #fff!important;
+        }
+    </style>
 </head>

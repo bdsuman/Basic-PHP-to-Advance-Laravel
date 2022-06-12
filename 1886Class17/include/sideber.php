@@ -33,7 +33,8 @@
 
 								<!-- Main -->
 								<li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
-								<li class="active"><a href="index.html"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
+								<li class="active"><a href="index.php"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
+								<li><a href="banar.php"><i class="icon-image-compare"></i> <span>Banar List</span></a></li>
 								<li>
 									<a href="#"><i class="icon-stack"></i> <span>Starter kit</span></a>
 									<ul>
