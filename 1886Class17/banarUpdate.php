@@ -28,8 +28,8 @@
 					<div class="breadcrumb-line">
 						<ul class="breadcrumb">
 							<li><a href="index.php"><i class="icon-home2 position-left"></i> Home</a></li>
-							<li><a href="banarCreate.php">Banar</a></li>
-							<li class="active">Create</li>
+							<li><a href="banarUpdate.php">Banar</a></li>
+							<li class="active">Update</li>
 						</ul>
 					</div>
 				</div>
@@ -42,7 +42,7 @@
 					<!-- Form horizontal -->
 					<div class="panel panel-flat">
 						<div class="panel-heading">
-							<h5 class="panel-title">Banar Create</h5>
+							<h5 class="panel-title">Banar Update</h5>
 							<div class="heading-elements">
 								<ul class="icons-list">
 			                		<li><a data-action="collapse"></a></li>
@@ -94,7 +94,7 @@
 									</div>
 								</fieldset>
 								<div class="text-right">
-									<button type="submit" class="btn btn-primary">Submit <i class="icon-arrow-right14 position-right"></i></button>
+									<button type="submit" class="btn btn-primary">Update <i class="icon-arrow-right14 position-right"></i></button>
 									<a href="banar.php" class="btn btn-default">Back to List <i class="icon-arrow-left13 position-right"></i></a>
 								</div>
 							</form>
@@ -103,8 +103,8 @@
 					<!-- /form horizontal -->
 
 					
-					<!-- Footer -->
-						<?php require 'include/footer.php'; ?>
+                    <!-- Footer -->
+                        <?php require 'include/footer.php'; ?>
 					<!-- /footer -->
 
 				</div>

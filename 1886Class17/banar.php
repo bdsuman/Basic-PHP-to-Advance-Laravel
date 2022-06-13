@@ -41,7 +41,7 @@
 					<!-- Basic datatable -->
 					<div class="panel panel-flat">
 						<div class="panel-heading">
-							<h5 class="panel-title">Basic datatable</h5>
+							<h5 class="panel-title">Banar List</h5>
 							<div class="heading-elements">
 								<ul class="icons-list" style="margin-top: 0px">
 									<li style="margin-right: 10px;"><a href="banarCreate.php" class="btn btn-primary add-new">Add New</a></li>
@@ -72,7 +72,7 @@
 										<td>22 Jun 1972</td>
 										<td><span class="label label-success">Active</span></td>
 										<td class="text-center">
-											<a href="#"><i class="icon-pencil5"></i></a>
+											<a href="banarUpdate.php"><i class="icon-pencil5"></i></a>
 											&nbsp;
 											<a href="#"><i class="icon-trash"></i></a>
 										</td>
